@@ -1,0 +1,45 @@
+{
+  "startedAt": "2026-10-27T10:42:11.286Z",
+  "ffmpeg": "7.0.2",
+  "probeMs": 251,
+  "durationSec": 12,
+  "video": "h264 1280x720",
+  "thumbMs": 2,
+  "posterBytes": 38362,
+  "stripFrames": 10,
+  "convertMs": 12320,
+  "matrix": [
+    {
+      "label": "mp4-h264-720p",
+      "status": "done",
+      "outputSize": 4852685,
+      "ms": 1586,
+      "command": "ffmpeg.exe -hide_banner -y -progress pipe:1 -nostats -i C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-media\\sample.mp4 -vf scale=-2:720:flags=lanczos -c:v libx264 -preset veryfast -crf 20 -pix_fmt yuv420p -profile:v high -c:a aac -b:a 192k -ac 2 -movflags +faststart -map 0:v:0? -map 0:a:0? C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-output\\sample_x264.mp4",
+      "output": "mp4 / h264 1280x720"
+    },
+    {
+      "label": "gif",
+      "status": "done",
+      "outputSize": 2712054,
+      "ms": 2066,
+      "command": "ffmpeg.exe -hide_banner -y -progress pipe:1 -nostats -i C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-media\\sample.mp4 -filter_complex fps=15,scale=480:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle -loop 0 C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-output\\sample_gif.gif",
+      "output": "gif / gif 480x270"
+    },
+    {
+      "label": "audio-mp3",
+      "status": "done",
+      "outputSize": 289875,
+      "ms": 282,
+      "command": "ffmpeg.exe -hide_banner -y -progress pipe:1 -nostats -i C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-media\\sample.mp4 -vn -c:a libmp3lame -b:a 192k -map 0:a:0? C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-output\\sample_mp3.mp3",
+      "output": "mp3 / audio only"
+    },
+    {
+      "label": "webm-vp9-480p",
+      "status": "done",
+      "outputSize": 1879403,
+      "ms": 6976,
+      "command": "ffmpeg.exe -hide_banner -y -progress pipe:1 -nostats -i C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-media\\sample.mp4 -vf scale=-2:480:flags=lanczos -c:v libvpx-vp9 -crf 32 -b:v 0 -row-mt 1 -deadline good -cpu-used 2 -c:a libopus -b:a 128k -map 0:v:0? -map 0:a:0? C:\\Users\\16270\\WorkBuddy\\2026-10-27-18-23-45\\test-output\\sample_vp9.webm",
+      "output": "webm / vp9 854x480"
+    }
+  ]
+}
