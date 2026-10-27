@@ -4,6 +4,14 @@
 
 ![VidForge](screenshots/app.png)
 
+## 下载即用
+
+到 [Releases](https://github.com/Daisk/vidforge/releases/latest) 下载 **`VidForge-1.0.0-portable.exe`**（约 106MB）：
+
+- 双击直接运行，**免安装**、无需 Node.js 环境
+- 系统装有 FFmpeg 即可（在 PATH 中）；也可把 `ffmpeg.exe` / `ffprobe.exe` 放到应用同级的 `bin` 目录
+- 首次运行会自解压到临时目录，启动稍慢几秒属正常；Windows 可能提示"未知发布者"（未购买代码签名证书），选择"更多信息 → 仍要运行"
+
 ## 功能
 
 **核心要求**

@@ -16,6 +16,7 @@
     "electron": "electron .",
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
+    "dist:portable": "npm run build && electron-builder --win portable -c.directories.output=release-portable",
     "test:core": "node scripts/test-core.mjs",
     "shot": "npm run build && electron . --screenshot"
   },
