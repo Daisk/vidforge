@@ -79,6 +79,10 @@ npm run build && electron . --selftest
 
 无头跑通 probe → 缩略图 → 4 种预设转换（MP4/GIF/MP3/VP9），结果写入 `test-results.json`。最近一次结果：4/4 通过，12s 720p 源，总耗时 12.3s。
 
+## 文档
+
+- [`docs/SESSION_SUMMARY.md`](docs/SESSION_SUMMARY.md) —— 开发会话总结：需求解读、9 项关键技术决策（含备选与取舍）、9 个问题的根因与修复、来自人的反馈及调整、测试证据、下一步计划
+
 ## 已知限制
 
 - HEVC/AV1 等 Chromium 不支持的容器内无法直接预览播放，此时显示代表性帧海报（转换不受影响）
